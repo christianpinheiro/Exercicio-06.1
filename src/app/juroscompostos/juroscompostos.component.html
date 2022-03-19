@@ -7,22 +7,20 @@
 <input type="number" step="1" [(ngModel)]="n"/>
 
 <div class="container-fluid">
-<table class="table">
-  <thead>        
-    <tr>
-      <th>Mês |</th>
-      <th>Valor |</th>
-      <th>Juros |</th>
-      <th>Valor com juros aplicado</th>  
-    </tr>
-    <tr *ngFor="let item of getJurosList(); index as i">
-      <td>{{i+1}}</td>
-      <td>{{getVp()}}R$</td>
-      <td>{{getJ()}}%</td>
-      <td>{{getJurosCompostos(vp, j, i+1).toFixed(2)}}R$</td>
-    </tr>
-  </thead>
-</table>
-
-
+  <table class="table">
+    <thead>        
+      <tr>
+        <th>Mês |</th>
+        <th>Valor |</th>
+        <th>Juros |</th>
+        <th>Valor com juros aplicado</th>  
+      </tr>
+      <tr *ngFor="let item of getJurosList(); index as i">
+        <td>{{i+1}}</td>
+        <td>{{getVp()}}R$</td>
+        <td>{{getJ()}}%</td>
+        <td>{{getJurosCompostos(vp, j, i+1).toFixed(2)}}R$</td>
+      </tr>
+    </thead>
+  </table>
 </div>
