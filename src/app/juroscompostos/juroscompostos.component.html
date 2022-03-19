@@ -5,5 +5,23 @@
 <input type="number" step="0.25" [(ngModel)]="j"/>
 <div>Período (em meses):</div>
 <input type="number" step="1" [(ngModel)]="n"/>
-<h3>Valor futuro:</h3>
-<h4>R$ {{getJurosCompostos()}}</h4>
+
+<div class="container-fluid">
+<table class="table">
+  <thead>        
+    <tr>
+      <th>Mês |</th>
+      <th>Valor |</th>
+      <th>Juros |</th>
+      <th>Valor com juros aplicado    
+    </tr>
+    <tr *ngFor="let item of getJurosList(); index as i">
+      <td>{{n}}</td>
+      <td>{{vp}}R$</td>
+      <td>{{j}}%</td>
+      <td>{{vj}}R$</td>
+    </tr>
+  </thead>
+</table>
+
+</div>
