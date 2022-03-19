@@ -3,13 +3,23 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-juros',
   templateUrl: './juros.component.html',
-  styleUrls: ['./juros.component.css']
+  styleUrls: ['./juros.component.css'],
 })
 export class JurosComponent implements OnInit {
+  vp: number;
+  j: number;
+  n: number;
 
-  constructor() { }
+  constructor() {
+    this.vp = 0;
+    this.j = 0;
+    this.n = 0;
+  }
 
   ngOnInit() {
   }
 
+  getJuros(){
+    return this.vp * (1 + this.j/100 * this.n);
+  }
 }
