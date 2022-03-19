@@ -19,7 +19,7 @@ export class JuroscompostosComponent implements OnInit {
   ngOnInit() {
   }
 
-  getJuros(){
+  getJurosCompostos(){
     return this.vp * (1 + this.j/100 * this.n);
   }
 }
