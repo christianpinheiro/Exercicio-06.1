@@ -13,15 +13,16 @@
       <th>Mês |</th>
       <th>Valor |</th>
       <th>Juros |</th>
-      <th>Valor com juros aplicado    
+      <th>Valor com juros aplicado</th>  
     </tr>
     <tr *ngFor="let item of getJurosList(); index as i">
-      <td>{{n}}</td>
-      <td>{{vp}}R$</td>
-      <td>{{j}}%</td>
-      <td>{{vj}}R$</td>
+      <td>{{i+1}}</td>
+      <td>{{getVp()}}R$</td>
+      <td>{{getJ()}}%</td>
+      <td>{{getJurosCompostos(vp, j, i+1).toFixed(2)}}R$</td>
     </tr>
   </thead>
 </table>
+
 
 </div>

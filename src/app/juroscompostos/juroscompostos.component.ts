@@ -9,28 +9,36 @@ export class JuroscompostosComponent implements OnInit {
   vp: number;
   j: number;
   n: number;
-  vj: number;
 
   constructor() {
     this.vp = 0;
     this.j = 0;
     this.n = 0;
-    this.vj = 0;
   }
 
-  ngOnInit() {
+  getVp(){
+    return this.vp;
   }
 
-  getJurosCompostos(){
-    return this.vj  = this.vp * (1 + this.j/100 * this.n);
+  getJ(){
+    return this.j;
+  }
+
+  getN(){
+    return this.n;
+  }
+
+  getJurosCompostos(vp, j, n){
+    return this.vp * Math.pow((1 + (j / 100)),n);
   }
 
   getJurosList() {
     let list: number[] = [];
 
-    for (let i = 1; i<= this.n; i++) list.push(this.getJurosCompostos());
+    for (let i = 1; i<= this.n; i++) list.push(this.getN());
     
     return list;
   }
+  ngOnInit() {}
 }
 
